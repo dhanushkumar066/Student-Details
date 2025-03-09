@@ -1,0 +1,51 @@
+<style>
+    .popup{
+        background-color: black;
+        padding: 15px;
+        width: 150px;
+        color: white;
+        margin-left: 500px;
+        margin-top: 100px;
+        position: relative;
+        z-index: 2;
+       
+    }
+    .hidden{
+        display: none;
+    }
+    .overlay{
+        background-color: black;
+        opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+</style>
+
+<button id="btn">Click</button>
+<div class="overlay hidden"></div>
+<div class="popup hidden">
+    <p style="text-align:right ; cursor: pointer;" id="close">X</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, laudantium quidem dignissimos molestiae, eveniet a mollitia, ratione assumenda blanditiis illo culpa exercitationem in rerum dolor ipsa porro. Officia, veritatis. Ducimus?</p>
+</div>
+
+<script>
+//Select popup
+var pop = document.querySelector(".popup")
+var btn = document.getElementById("btn")
+var close = document.getElementById("close")
+var overlay = document.querySelector(".overlay")
+
+btn.addEventListener("click",function(){
+    pop.classList.remove("hidden")
+    overlay.classList.remove("hidden")
+})
+close.addEventListener("click",function(){
+    pop.classList.add("hidden")
+    overlay.classList.add("hidden")
+    
+})
+</script>

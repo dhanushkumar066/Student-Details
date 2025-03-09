@@ -1,0 +1,36 @@
+<h1 onclick="deleteElement(event)">One</h1>
+<h1 onclick="deleteElement(event)">Two</h1>
+<h1 onclick="deleteElement(event)">Three</h1>
+<h1 onclick="deleteElement(event)">Four</h1>
+<h1 onclick="deleteElement(event)">Five</h1>
+<h1 onclick="deleteElement(event)">Six</h1>
+
+
+<script>
+    /*function deleteElement(event)
+    {
+      event.target.remove()
+    }*/
+</script>
+
+<!--New comment-we can delete an elements parent element-->
+<div>
+    <p>Bye</p>
+    <h1 id="head">Hello</h1> 
+</div>
+
+<script>
+    var head = document.getElementById("head")
+    head.parentElement.remove
+</script>
+
+<!--New comment-like selecting parent we can select the closest element-->
+<div class="container">
+    <p>Bye</p>
+    <h1 id="head">Hello</h1>   
+</div>
+
+<script>
+    var head = document.getElementById("head")
+    head.closest(".container").remove()
+</script>

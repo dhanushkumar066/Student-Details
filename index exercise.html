@@ -1,0 +1,29 @@
+<div id="container">
+    <p id="Paragraph1">This is First Paragraph</p>
+    <p id="Paragraph2">This is Second Paragraph</p>
+    <p id="Paragraph3">This is Third Paragraph</p>
+
+    <ul>
+        <li>Item 1</li>
+        <li class="special">Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</div>
+
+<div id="myDiv">
+   
+</div>
+<script>
+    var p2 = document.getElementById("paragraph2")
+    console.log(p2.textContent)
+
+    var p3 = document.getElementById("paragraph3")
+    p3.textContent = "Updated Paragraph 3"
+
+    var mydiv = document.getElementById("myDiv")
+    mydiv.innerHTML = " <strong>This is Bold Text</strong>"
+
+    var special = document.querySelector(".special")
+    console.log(special.textContent)
+
+</script>
